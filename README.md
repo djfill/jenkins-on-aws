@@ -10,7 +10,7 @@ If you don't have one click [here](https://aws.amazon.com/free/)
 Follow the [installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) if you do not have it installed.
 ### Terraform v0.10.7+ installed
 Follow the [installation guide](https://www.terraform.io/intro/getting-started/install.html) if you do not have it installed.
-##Domain name
+## Domain name
 You'll need a domain name. Get a free one [here](http://www.freenom.com/) if you do not have one.
 
 ### Ansible configuration
