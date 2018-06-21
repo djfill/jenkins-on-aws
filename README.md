@@ -4,7 +4,7 @@ The intention is to quickly provision the Jenkins server so that you can focus o
 
 # Prerequisites
 If you are familiar with AWS, already have an account with Access Keys and SSH key pairs then you should be good to go. If not, you may need to refer to some of the following. We are also using dynamic inventory so again please read and follow the links if unfamiliar. Knowledge in Ansible and Terraform is a bonus but not essential as the step by step guide will guide you through so long as you have them installed locally.
-##AWS account
+## AWS account
 If you don't have one click [here](https://aws.amazon.com/free/)
 ## Ansible v2.5.0+ installed
 Follow the [installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) if you do not have it installed.
@@ -17,9 +17,11 @@ You'll need a domain name. Get a free one [here](http://www.freenom.com/) if you
 To read up  on Ansible configuration go [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_configuration.html)
 ### Ansible and Dynamic Amazon EC2 Inventory Management
 To read up on Dynamic Inventory go [here](https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/) but to summarise you to download [ec2.py](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py) and [ec2.ini](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini) and place them in <user_home_directory>/ansible/ then configure <user_home_directory>/.ansible.cfg to include the following:
+```
 [defaults]
 inventory = <user_home_directory>/ansible/ec2.py
 host_key_checking = False
+```
 
 ## AWS Access Key
 Add your AWS Access key and token here:
