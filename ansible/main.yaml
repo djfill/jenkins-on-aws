@@ -1,0 +1,15 @@
+---
+
+- name: apply ubuntu configuration
+  hosts: tag_Platform_ubuntu
+  tasks:
+
+  roles:
+    - ubuntu
+
+- name: install and configure jenkins
+  hosts: tag_Name_jenkins
+  tasks:
+
+  roles:
+    - jenkins

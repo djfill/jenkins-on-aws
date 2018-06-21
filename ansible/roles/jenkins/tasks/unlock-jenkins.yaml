@@ -1,0 +1,16 @@
+---
+- stat:
+    path: /var/lib/jenkins/secrets/initialAdminPassword
+  register: stat_result
+  become: true
+
+- fetch:
+    src: /var/lib/jenkins/secrets/initialAdminPassword
+    dest: /tmp/fetched/
+    flat: yes
+  become: true
+  when: stat_result.stat.exists == true
+
+- name: initialAdminPassword
+  debug: 
+    msg: "{{lookup('file', '/tmp/fetched/initialAdminPassword') }}"

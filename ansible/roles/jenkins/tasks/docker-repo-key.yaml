@@ -1,0 +1,6 @@
+---
+- name: add docker repository key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  become: true

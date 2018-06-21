@@ -1,0 +1,5 @@
+---
+- name: add certbot repo
+  apt_repository:
+    repo: 'ppa:certbot/certbot'
+  become: true

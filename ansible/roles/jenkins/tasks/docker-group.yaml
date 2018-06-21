@@ -1,0 +1,16 @@
+---
+- name: Add remote user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+  become: true
+
+- name: Add jenkins user to docker group
+  user:
+    name: jenkins
+    groups: docker
+    append: yes
+  become: true
+  notify:
+  - restart jenkins

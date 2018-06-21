@@ -1,0 +1,44 @@
+---
+- import_tasks: jenkins-repo-key.yaml
+
+- import_tasks: debian-repo.yaml
+
+- import_tasks: apt-get-update.yaml
+
+- import_tasks: install-java.yaml
+
+- import_tasks: install-jenkins.yaml
+  notify:
+  - start jenkins
+
+- import_tasks: install-nginx.yaml
+
+- import_tasks: certbot-repo.yaml
+
+- import_tasks: install-certbot.yaml
+
+- import_tasks: configure-nginx-domain.yaml
+  notify:
+  - reload nginx
+
+- import_tasks: letsencrypt-registration.yaml
+
+- import_tasks: obtain-ssl-cert.yaml
+
+- import_tasks: configure-jenkins.yaml
+  notify:
+  - restart jenkins
+
+- import_tasks: configure-nginx.yaml
+  notify:
+  - reload nginx
+
+- import_tasks: docker-repo-key.yaml
+
+- import_tasks: docker-repo.yaml
+
+- import_tasks: install-docker.yaml
+
+- import_tasks: docker-group.yaml
+
+- import_tasks: unlock-jenkins.yaml

@@ -1,0 +1,6 @@
+---
+- name: install jenkins
+  apt:
+    name: jenkins
+    allow_unauthenticated: yes
+  become: true

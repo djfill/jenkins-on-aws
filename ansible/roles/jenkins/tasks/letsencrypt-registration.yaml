@@ -1,0 +1,4 @@
+---
+- name: register with letsencrypt
+  command: certbot register -m {{ email }} --agree-tos -n
+  become: true

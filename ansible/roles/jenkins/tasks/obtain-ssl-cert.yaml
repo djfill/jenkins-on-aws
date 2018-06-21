@@ -1,0 +1,4 @@
+---
+- name: obtain ssl cert
+  command: certbot --nginx -d {{ domain }} -d www.{{ domain }} -n
+  become: true

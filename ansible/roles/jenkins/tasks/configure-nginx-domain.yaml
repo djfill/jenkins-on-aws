@@ -1,0 +1,11 @@
+---
+- name: add default nginx.conf
+  template:
+    src: default1.j2
+    dest: /etc/nginx/sites-available/default
+    owner: root
+    group: root
+    mode: 0644
+  become: true
+  notify:
+  - reload nginx

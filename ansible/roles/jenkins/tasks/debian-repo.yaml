@@ -1,0 +1,9 @@
+---
+- name: append the debian package repo
+  copy:
+    src: files/jenkins.list
+    dest: /etc/apt/sources.list.d/
+    owner: root
+    group: root
+    mode: 0644
+  become: true

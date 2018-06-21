@@ -1,0 +1,5 @@
+---
+domain: <your_domain_name>
+ansible_user: ubuntu
+ansible_python_interpreter: /usr/bin/python3
+email: <your_email>

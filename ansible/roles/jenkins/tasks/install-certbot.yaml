@@ -1,0 +1,6 @@
+---
+- name: install certbot
+  apt:
+    name: python-certbot-nginx
+    allow_unauthenticated: yes
+  become: true

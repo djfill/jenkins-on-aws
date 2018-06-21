@@ -1,0 +1,6 @@
+---
+- name: add jenkins repository key
+  apt_key:
+    url: http://nginx.org/keys/nginx_signing.key
+    state: present
+  become: true

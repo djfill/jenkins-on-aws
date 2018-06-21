@@ -1,0 +1,4 @@
+---
+- name: Update packages
+  import_tasks: apt-update.yaml
+

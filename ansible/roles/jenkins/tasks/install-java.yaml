@@ -1,0 +1,6 @@
+---
+- name: install java
+  apt:
+    name: default-jre
+    allow_unauthenticated: yes
+  become: true
