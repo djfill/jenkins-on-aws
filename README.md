@@ -16,7 +16,15 @@ You'll need a domain name. Get a free one [here](http://www.freenom.com/) if you
 ### Ansible configuration
 To read up  on Ansible configuration go [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_configuration.html)
 ### Ansible and Dynamic Amazon EC2 Inventory Management
-To read up on Dynamic Inventory go [here](https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/) but to summarise: Download [ec2.py](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py) and [ec2.ini](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini) and place them in <user_home_directory>/ansible/ then configure <user_home_directory>/.ansible.cfg to include the following:
+To read up on Dynamic Inventory go [here](https://aws.amazon.com/blogs/apn/getting-started-with-ansible-and-dynamic-amazon-ec2-inventory-management/) but to summarise: Download [ec2.py](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py) and [ec2.ini](https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini) and place them in
+```
+<user_home_directory>/ansible/ 
+```
+then configure 
+```
+<user_home_directory>/.ansible.cfg
+```
+to include the following:
 ```
 [defaults]
 inventory = <user_home_directory>/ansible/ec2.py
