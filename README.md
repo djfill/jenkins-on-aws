@@ -30,6 +30,7 @@ to include the following:
 inventory = <user_home_directory>/ansible/ec2.py
 host_key_checking = False
 ```
+#### NOTE: if using MAC OS X you may need to change the python env in ec2.py to #!/usr/bin/env python2
 
 ### AWS Access Key
 Add your AWS Access key and token here:
